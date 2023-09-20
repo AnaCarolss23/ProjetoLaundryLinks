@@ -25,6 +25,7 @@
 
 body {
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 body * {
   font-family: "Inter", sans-serif;
@@ -57,7 +58,6 @@ body * {
   position: relative;
   width: 64px;
   margin: 4px auto;
-
 }
 
 #switch button {
@@ -88,7 +88,6 @@ body * {
   background: var(--surface-color);
   -webkit-backdrop-filter: blur(4px);
 }
-
 
 /* links*/
 
@@ -145,8 +144,9 @@ ul li a:hover {
   border-radius: 50%;
 }
 .scale-up-center #social-links {
-	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 #social-links a:hover {
   background-color: var(--highlight-color);
@@ -156,4 +156,14 @@ footer {
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
+}
+/*media queries*/
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(./assets/assets/bg-desktop-light.jpg);
+  }
 }
